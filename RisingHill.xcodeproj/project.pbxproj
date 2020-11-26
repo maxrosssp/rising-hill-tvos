@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A4B9FEB256F78F600176486 /* application.js in Resources */ = {isa = PBXBuildFile; fileRef = 1A946879256F2A1C000EC2D1 /* application.js */; };
 		1A946878256F2A1C000EC2D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A946877256F2A1C000EC2D1 /* AppDelegate.swift */; };
 		1A94687B256F2A1F000EC2D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A94687A256F2A1F000EC2D1 /* Assets.xcassets */; };
 		1A94687E256F2A1F000EC2D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A94687C256F2A1F000EC2D1 /* LaunchScreen.storyboard */; };
@@ -52,10 +53,10 @@
 			isa = PBXGroup;
 			children = (
 				1A946877256F2A1C000EC2D1 /* AppDelegate.swift */,
-				1A946879256F2A1C000EC2D1 /* application.js */,
 				1A94687A256F2A1F000EC2D1 /* Assets.xcassets */,
 				1A94687C256F2A1F000EC2D1 /* LaunchScreen.storyboard */,
 				1A94687F256F2A1F000EC2D1 /* Info.plist */,
+				1A946879256F2A1C000EC2D1 /* application.js */,
 			);
 			path = RisingHill;
 			sourceTree = "<group>";
@@ -118,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A94687B256F2A1F000EC2D1 /* Assets.xcassets in Resources */,
+				1A4B9FEB256F78F600176486 /* application.js in Resources */,
 				1A94687E256F2A1F000EC2D1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,15 +270,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5462A7TGSF;
+				DEVELOPMENT_TEAM = JNEMMM5XPP;
 				INFOPLIST_FILE = RisingHill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = maxdev.RisingHill;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxwellspiegelman.HillRising;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
@@ -287,15 +291,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5462A7TGSF;
+				DEVELOPMENT_TEAM = JNEMMM5XPP;
 				INFOPLIST_FILE = RisingHill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = maxdev.RisingHill;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxwellspiegelman.HillRising;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
