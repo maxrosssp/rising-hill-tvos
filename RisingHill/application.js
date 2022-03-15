@@ -7,17 +7,6 @@
 //  Created by Maxwell Spiegelman on 11/25/20.
 //
 
-/*
- * This file provides an example skeletal stub for the server-side implementation 
- * of a TVML application.
- *
- * A javascript file such as this should be provided at the tvBootURL that is 
- * configured in the AppDelegate of the TVML application. Note that  the various 
- * javascript functions here are referenced by name in the AppDelegate. This skeletal 
- * implementation shows the basic entry points that you will want to handle 
- * application lifecycle events.
- */
-
 var hillBaseUrl = 'https://thehill.com/hilltv/rising?page=6';
 var hillBaseUrl = 'https://thehill.com/hilltv/rising';
 var playerBaseUrl = 'https://cdn.jwplayer.com/v2/playlists/';
@@ -26,17 +15,6 @@ var serverBaseUrl;
 var lastPageNum = 0;
 var episodes = {};
 
-/**
- * @description The onLaunch callback is invoked after the application JavaScript 
- * has been parsed into a JavaScript context. The handler is passed an object 
- * that contains options passed in for launch. These options are defined in the
- * swift or objective-c client code. Options can be used to communicate to
- * your JavaScript code that data and as well as state information, like if the 
- * the app is being launched in the background.
- *
- * The location attribute is automatically added to the object and represents 
- * the URL that was used to retrieve the application JavaScript.
- */
 App.onLaunch = function(options) {
     console.log("\AYO: 1\n");
     
@@ -54,29 +32,19 @@ App.onLaunch = function(options) {
     });
 }
 
-
 App.onWillResignActive = function() {
-
 }
 
 App.onDidEnterBackground = function() {
-
 }
 
 App.onWillEnterForeground = function() {
-    
 }
 
 App.onDidBecomeActive = function() {
-    
 }
 
-
-/**
- * This convenience function returns an alert template, which can be used to present errors to the user.
- */
 var createAlert = function(title, description) {
-
     var alertString = `<?xml version="1.0" encoding="UTF-8" ?>
         <document>
           <alertTemplate>
@@ -84,19 +52,14 @@ var createAlert = function(title, description) {
             <description>${description}</description>
           </alertTemplate>
         </document>`
-
+    
     var parser = new DOMParser();
-
     var alertDoc = parser.parseFromString(alertString, "application/xml");
 
     return alertDoc
 }
 
-/**
- * This convenience function returns a loading template, which can be used to present a loading indicator to the user.
- */
 function createLoadingDocument(text) {
-    
     var loadingMarkup = `<?xml version="1.0" encoding="UTF-8" ?>
         <document>
             <loadingTemplate>
@@ -109,24 +72,6 @@ function createLoadingDocument(text) {
 
     return new DOMParser().parseFromString(loadingMarkup, 'application/xml');
 }
-
-/**
- * Get a new TVML document from the server. Upon success, call pushPage() to place it onto the navigationDocument stack.
- */
-//function getDocument(extension) {
-//    var loadingScreen = createLoadingDocument();
-//    navigationDocument.pushDocument(loadingScreen);
-//
-//    var url = serverBaseUrl + extension;
-//    getEndpoint(serverBaseUrl + extension, () => {
-//        navigationDocument.replaceDocument(page, loadingScreen);
-//    })
-//    templateXHR.addEventListener("load", function() {
-//        navigationDocument.replaceDocument(page, loadingScreen);
-//    }, false);
-//    templateXHR.open("GET", url, true);
-//    templateXHR.send();
-//}
 
 function callEndpoint(method, url, onloadCallback) {
     var templateXHR = new XMLHttpRequest();
